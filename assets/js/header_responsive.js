@@ -46,8 +46,8 @@ document.querySelector('#tablet_nav_open').addEventListener('click', () => {
     const imgs = btn.querySelectorAll('.nav_btn');
     imgs.forEach((img) => {
       img.src = isOpen
-        ? '../assets/images/header-responsive/tablet_menu_down.png'
-        : '../assets/images/header-responsive/tablet_menu_up.png';
+        ? 'assets/images/header-responsive/tablet_menu_down.png'
+        : 'assets/images/header-responsive/tablet_menu_up.png';
 
       img.alt = isOpen ? '하위 메뉴 열기' : '하위 메뉴 닫기';
     });
