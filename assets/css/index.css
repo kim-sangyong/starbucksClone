@@ -7,7 +7,7 @@
 .main_img_wrap {
   height: 40vw;
   min-height: 600px;
-  background-image: url("/assets/images/top_bg.jpg");
+  background-image: url("assets/images/top_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,14 +172,14 @@
 }
 .slider_wrap .swiper-button-prev {
   left: 25%;
-  background-image: url("/assets/images/slider-images/prev_arrow.png");
+  background-image: url("assets/images/slider-images/prev_arrow.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
 }
 .slider_wrap .swiper-button-next {
   right: 25%;
-  background-image: url("/assets/images/slider-images/next_arrow.png");
+  background-image: url("assets/images/slider-images/next_arrow.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
@@ -294,7 +294,7 @@
 }
 
 .colombia_wrap {
-  background-image: url("/assets/images/summer_promotion_bg.png");
+  background-image: url("assets/images/summer_promotion_bg.png");
   background-repeat: no-repeat;
   height: 560px;
   display: flex;
@@ -362,7 +362,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background-image: url("/assets/images/reserve_bg.jpg");
+  background-image: url("assets/images/reserve_bg.jpg");
   height: 400px;
 }
 .reserve_wrap .reserve_inner {
@@ -416,7 +416,7 @@
 }
 
 .fav_wrap {
-  background-image: url("/assets/images/pick_bg.png");
+  background-image: url("assets/images/pick_bg.png");
   background-position: bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -505,7 +505,7 @@
 }
 
 .reserve_magazine_wrap {
-  background-image: url("/assets/images/line_bg.png");
+  background-image: url("assets/images/line_bg.png");
   background-repeat: no-repeat;
   background-position: 50% 100%;
   height: 380px;
@@ -570,7 +570,7 @@
 }
 
 .store_wrap {
-  background-image: url("/assets/images/store_bg.jpg");
+  background-image: url("assets/images/store_bg.jpg");
   background-size: 100% auto;
   height: 400px;
   overflow: hidden;
@@ -582,7 +582,7 @@
   padding: 0 5vw;
 }
 .store_wrap .store_inner .store_img03_box {
-  background-image: url("/assets/images/store_img03.png");
+  background-image: url("assets/images/store_img03.png");
   position: absolute;
   left: 53%;
   transform: translateX(-50%);
@@ -716,7 +716,7 @@
   .res_main_wrap {
     display: block;
     background-repeat: no-repeat;
-    background-image: url("/assets/images/index-responsive/res_main_bg.jpg");
+    background-image: url("assets/images/index-responsive/res_main_bg.jpg");
     background-position: center;
     background-size: cover;
     width: auto;
@@ -796,7 +796,7 @@
   .res_main_wrap {
     display: block;
     background-repeat: no-repeat;
-    background-image: url("/assets/images/index-responsive/res_main_bg.jpg");
+    background-image: url("assets/images/index-responsive/res_main_bg.jpg");
     background-position: center;
     background-size: cover;
     width: auto;
@@ -1267,7 +1267,7 @@
 }
 @media screen and (max-width: 883px) {
   .colombia_wrap {
-    background-image: url("/assets/images/index-responsive/res_promotion_bg.jpg");
+    background-image: url("assets/images/index-responsive/res_promotion_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 190vw;
@@ -1473,7 +1473,7 @@
 }
 @media screen and (max-width: 883px) {
   .fav_wrap {
-    background-image: url("/assets/images/index-responsive/res_pick_bg.png");
+    background-image: url("assets/images/index-responsive/res_pick_bg.png");
     background-attachment: scroll;
     background-position: center;
     background-size: 100% auto;
