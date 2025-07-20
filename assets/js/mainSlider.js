@@ -12,12 +12,12 @@ const swiperSection = document.querySelector('.slider_wrap');
   if (isOpen) {
     // 닫기
     swiperSection.classList.remove('open');
-    btnImg.src = '/assets/images/btn_down.png';
+    btnImg.src = 'assets/images/btn_down.png';
     btnImg.alt = '프로모션 펼치기';
   } else {
     // 열기
     swiperSection.classList.add('open');
-    btnImg.src = '/assets/images/btn_up.png';
+    btnImg.src = 'assets/images/btn_up.png';
     btnImg.alt = '프로모션 숨기기';
 
     // 슬라이더 최초 1회만 실행

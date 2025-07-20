@@ -30,8 +30,8 @@ const footerItemBtn = document.querySelectorAll('.res_footer_btn');
         // 이미지 변경
         if (arrowImg) {
             arrowImg.src = isOpen
-                ? '/assets/images/footer-responsive/res_footer_arrow_down.png'
-                : '/assets/images/footer-responsive/res_footer_arrow_up.png';
+                ? 'assets/images/footer-responsive/res_footer_arrow_down.png'
+                : 'assets/images/footer-responsive/res_footer_arrow_up.png';
         }
     });
 });

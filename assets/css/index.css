@@ -716,7 +716,7 @@
   .res_main_wrap {
     display: block;
     background-repeat: no-repeat;
-    background-image: url("assets/images/index-responsive/res_main_bg.jpg");
+    background-image: url("/assets/images/index-responsive/res_main_bg.jpg");
     background-position: center;
     background-size: cover;
     width: auto;
@@ -796,7 +796,7 @@
   .res_main_wrap {
     display: block;
     background-repeat: no-repeat;
-    background-image: url("assets/images/index-responsive/res_main_bg.jpg");
+    background-image: url("/assets/images/index-responsive/res_main_bg.jpg");
     background-position: center;
     background-size: cover;
     width: auto;
@@ -1267,7 +1267,7 @@
 }
 @media screen and (max-width: 883px) {
   .colombia_wrap {
-    background-image: url("assets/images/index-responsive/res_promotion_bg.jpg");
+    background-image: url("/assets/images/index-responsive/res_promotion_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 190vw;
@@ -1473,7 +1473,7 @@
 }
 @media screen and (max-width: 883px) {
   .fav_wrap {
-    background-image: url("assets/images/index-responsive/res_pick_bg.png");
+    background-image: url("/assets/images/index-responsive/res_pick_bg.png");
     background-attachment: scroll;
     background-position: center;
     background-size: 100% auto;
