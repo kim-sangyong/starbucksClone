@@ -11,7 +11,7 @@
 .main_img_wrap {
     height: 40vw;
     min-height: 600px;
-    background-image: url('assets/images/top_bg.jpg');
+    background-image: url('../images/top_bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -169,14 +169,14 @@
 
     .swiper-button-prev {
         left: 25%;
-        background-image: url('assets/images/slider-images/prev_arrow.png');
+        background-image: url('../images/slider-images/prev_arrow.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-color: transparent;
     }
     .swiper-button-next {
         right: 25%;
-        background-image: url('assets/images/slider-images/next_arrow.png');
+        background-image: url('../images/slider-images/next_arrow.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-color: transparent;
@@ -299,7 +299,7 @@
 
 // 콜롬비아 라니뇨
 .colombia_wrap {
-    background-image: url('assets/images/summer_promotion_bg.png');
+    background-image: url('../images/summer_promotion_bg.png');
     background-repeat: no-repeat;
     height: 560px;
     @include flex-row-center-y;
@@ -366,7 +366,7 @@
 .reserve_wrap {
     @include flex-row-center-x;
     width: 100%;
-    background-image: url('assets/images/reserve_bg.jpg');
+    background-image: url('../images/reserve_bg.jpg');
     height: 400px;
 
     .reserve_inner {
@@ -420,7 +420,7 @@
 
 // Pick Your Favorite
 .fav_wrap {
-    background-image: url('assets/images/pick_bg.png');
+    background-image: url('../images/pick_bg.png');
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -520,7 +520,7 @@
 
 // resereve_magazine
 .reserve_magazine_wrap {
-    background-image: url('assets/images/line_bg.png');
+    background-image: url('../images/line_bg.png');
     background-repeat: no-repeat;
     background-position: 50% 100%;
     height: 380px;
@@ -585,7 +585,7 @@
 
 // store
 .store_wrap {
-    background-image: url('assets/images/store_bg.jpg');
+    background-image: url('../images/store_bg.jpg');
     background-size: 100% auto;
     height: 400px;
     overflow: hidden; // 사진 튀어나오는거 없앰
@@ -597,7 +597,7 @@
         padding: 0 5vw;
             
             .store_img03_box {
-                background-image: url('assets/images/store_img03.png');
+                background-image: url('../images/store_img03.png');
                 position: absolute;
                 left: 53%;
                 transform: translateX(-50%);
