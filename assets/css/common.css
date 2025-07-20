@@ -1,0 +1,34 @@
+/* 구글 폰트 Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden; /* 화면 줄였을때 여백이 생겨서 적용 */
+}
+
+html {
+    font-size: 62.5%; /* 폰트 사이즈 rem 적용 하기 위해서 적용 1rem = 10px */
+    overflow-x: hidden; /* 화면 줄였을때 여백이 생겨서 적용 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

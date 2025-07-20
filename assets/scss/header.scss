@@ -1,0 +1,169 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+#header {
+    height: 120px;
+
+    .header_wrap {
+        position: fixed;
+        background-color: #f6f5ef;
+        border-top: 2px solid #383838;
+        height: 120px;
+        width: 100%;
+        z-index: 10;
+
+    .util_nav {
+        @include flex-row-center-x;
+        position: relative;
+        top: 10px;  
+        width: 100%;
+        
+        .util_nav_inner {
+            @include flex-row-center-x-y;
+            font-size: 1.3rem;
+            color: #555;
+            gap: 25px;
+            position: relative;
+            left: 175px;
+            letter-spacing: 0.2px;
+            
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .search_form {
+                @include flex-row-center-y;
+
+                .search_input_custom {
+                    display: inline-block;
+                    overflow: hidden;
+                    background: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    height: 35px;    
+                    width: 0;
+                    transition: width 0.6s, border 0.2s;
+                }
+
+                // 버튼 클릭시 클래스 추가 
+                .search_input_custom.active {
+                    width: 150px;
+                    border: 1px solid #ccc;
+                }
+
+                .visually_hidden {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                }
+
+                .search_btn_box,
+                .search_btn_box_two {
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 42px;
+                    text-align: center;
+                    // display: inline-block;
+                    cursor: pointer;
+                }
+                .search_btn_box_two {
+                    display: none;
+                }
+            }
+        }
+    }
+
+        .main_nav {
+            max-width: 1200px;
+            margin: 0 auto; // max-width 설정후 가운데 정렬
+            width: 100%;
+            @include flex-row-center-x-y;
+            gap: 5%;
+            padding: 0 5vw;
+
+             .logo {
+                position: relative;
+                bottom: 20px;
+            }
+            
+            .nav_ul{ 
+                @include flex-row;
+                font-size: 1.4rem;
+                color: $txt-primary-black;
+
+            }
+            
+            .list_hover {
+               a {
+                display: block;
+                height: 63px;
+                padding: 20px;
+
+                &:hover {
+                    background-color: #2C2A29;
+                    color: #669900;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .nav_sub_wrap {
+        z-index: 5;
+        overflow: hidden; // 마우스 오버를 반복적으로 했을때 li요소들을 가려줌
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: #2C2A29;
+        height: 0px;
+        transition: height 0.5s ease; // opacity 0.3s ease,
+        
+        .nav_sub_inner {
+            padding: 4px 0 40px 0;
+            @include flex-row-center-x;
+            gap: 6%;
+            
+             .sub_ul {
+                font-size: 1.3rem;
+                position: relative;
+                top: 20px;
+                color: #999;
+                @include flex-column;
+                gap: 10px;
+
+                .sub_ul_tit {
+                    margin-bottom: 10px;
+                    color: $txt-primary-white;
+                    font-size: 1.5rem;
+                    // 타이틀 호버
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+                // 타이틀 아닌것들 호버
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }           
+    }
+    .show_menu {
+        height: 300px;
+    }
+}
+
+.tablet_header_wrap {
+    display: none;
+}
+}
+
+
+@import './responsive/responsive_header';

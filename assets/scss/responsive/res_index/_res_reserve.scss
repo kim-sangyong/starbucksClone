@@ -1,0 +1,75 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+@media screen and (max-width: 883px) {
+    .reserve_wrap {
+        height: 100%;
+
+        .reserve_inner {
+            position: relative;
+            .reserve_col {
+                .reserve_logo {
+                    display: none;
+                }
+                .res_colombia_img {
+                    display: block;
+                    width: 100%;
+                }
+                .reserve_link_box {
+                    position: absolute;
+                    bottom: 100px; /* 원하는 만큼 내려주세요 */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40%;
+
+                    .reserve_link {
+                        width: 100%;
+                        padding-top: 4.2vw;
+                        padding-bottom: 4.2vw;
+                        font-size: 3.8vw;
+                        font-weight: 600;
+                        border-radius: 3px;
+                    }
+                }           
+            }
+            .reserve_coffee {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .reserve_wrap {
+        .reserve_inner {
+            position: relative;
+
+            .reserve_col {
+                .reserve_link_box {
+                    position: absolute;
+                    bottom: 85px;
+
+                    .reserve_link {
+                        padding-top: 5vw;
+                        padding-bottom: 5vw;
+                    }
+                }           
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reserve_wrap {
+        .reserve_inner {
+            position: relative;
+
+            .reserve_col {
+                .reserve_link_box {
+                    position: absolute;
+                    bottom: 50px;
+                }           
+            }
+        }
+    }
+}

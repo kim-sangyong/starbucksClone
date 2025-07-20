@@ -1,0 +1,175 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+@media screen and (max-width: 1420px){
+    .colombia_wrap {
+        .colombia_inner {
+            .colombia_img_box {
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .colombia_wrap {
+        .colombia_inner {
+            .colombia_img_box {
+                width: 22%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .colombia_wrap {
+        .colombia_inner {
+            .colombia_img_box {
+                width: 24%;
+            }
+
+            .colombia_con_box {
+                font-size: 1.5rem;
+
+                .colombia_tit {
+                    font-size: 3.2rem;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 883px){
+    .colombia_wrap {
+        background-image: url('/assets/images/index-responsive/res_promotion_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 190vw;
+        
+        .colombia_inner {
+            max-width: 1200px;
+            @include flex-column-center-x-y;
+            padding: 0 5vw;
+
+            .colombia_img_box {
+                width: 100%;
+                @include flex-column-center-x-y;
+
+                .coffee_bean {
+                    display: none;
+                }
+                .res_coffee_bean {
+                    width: 100%;
+                    max-width: 100%;
+                    display: block;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;;
+                    
+                }
+            }
+            .colombia_con_box { 
+                @include flex-column-center-y;
+                color: #003d10;
+                transform: translateX(0);
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                
+                .pc_txt_con {
+                    display: none;
+                }
+
+                .res_txt_con {
+                    letter-spacing: -2.5px;
+                    font-size: 2.5rem;
+                    text-align: center;
+                    display: block;
+                    
+                }
+
+                .res_colombia_tit {
+                    letter-spacing: -3px;
+                    font-size: 4rem;
+                    line-height: 2.5;
+                    font-weight: 700;
+                }
+            }
+            .colombia_btn_box {
+                margin-top: 50px;
+                width: 100%;
+                border-radius: 3px;
+                
+
+                a {
+                    margin: 0 auto;
+                    width: 63%;
+                    // height: 90px;
+                    padding-top: 4.2vw;
+                    padding-bottom: 4.2vw;
+                    color: #003d10;
+                    border: 2px solid #003d10;
+                    font-size: 3.8vw;
+                    font-weight: bold;
+                    border-radius: 3px;
+
+                    &:hover {
+                        background-color: #003d10;
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .colombia_wrap {
+        .colombia_inner {
+            .colombia_con_box {   
+                .res_txt_con {
+                    font-size: 1.8rem;
+                }
+
+                .res_colombia_tit {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .colombia_wrap {
+        .colombia_inner {
+            overflow: hidden;
+            .colombia_img_box {
+                width: 120%;
+            }
+
+            .colombia_con_box {   
+                .res_txt_con {
+                    font-size: 1.5rem;
+                }
+
+                .res_colombia_tit {
+                    font-size: 2.4rem;
+                }
+            }
+            .colombia_btn_box {
+                margin-top: 30px;
+
+                a {
+                    font-size: 1.6rem;
+                }
+            }
+            .colombia_btn_box {
+                a {
+                    width: 60%;
+                    padding-top: 5vw;
+                    padding-bottom: 5vw;
+                }
+            }
+        }
+    }
+}

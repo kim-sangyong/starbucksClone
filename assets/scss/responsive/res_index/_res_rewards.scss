@@ -1,0 +1,163 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+@media screen and (max-width: 883px) {
+    .rewards_wrap {
+        .rewards_inner {
+            .rewards_box {
+                @include flex-column;
+
+                .rewards_logo_box {
+                    width: 40%;
+
+                    .rewards_logo {
+                        width: 100%;
+                    }
+                }
+
+                .txt_col_box {
+                    @include flex-column-center-y;
+
+                    .txt_row_intro {
+                        @include flex-column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 25px;
+
+                        .txt_box_01 {
+                            display: none;
+                        }
+
+                        .res_txt_box_01 {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                            line-height: 1.4;
+                            
+                            h2 {
+                                font-weight: normal;
+                                font-size: 2.2rem;
+                            }
+
+                            .res_txt_ex {
+                                margin-top: 15px;
+                            }
+
+                            p {
+                                font-size: 1.7rem;
+                            }
+                        }
+
+                        .btn_signin_group {
+                            // width: 100%;
+                            margin: 0 auto;
+
+                            a {
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+                 .txt_row_noti {
+                    @include flex-column-center-y;
+                    gap: 25px;
+
+                    .txt_box_02 {
+                        display: none;
+                    }
+
+                    .res_txt_box_02 {
+                        display: block;
+                        text-align: center;
+                        line-height: 1.5;
+                        font-size: 1.7rem;
+                    }
+                    .btn_mgift {
+                       width: 350px;
+                       height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .rewards_wrap {
+        .rewards_inner {
+            .rewards_box {
+                @include flex-column;
+
+                .rewards_logo_box {
+                    width: 45%;
+
+                    .rewards_logo {
+                        width: 100%;
+                    }
+                }
+
+                .txt_col_box {
+                    @include flex-column-center-y;
+
+                    .txt_row_intro {
+                        @include flex-column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 25px;
+
+                        .txt_box_01 {
+                            display: none;
+                        }
+
+                        .res_txt_box_01 {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                            line-height: 1.4;
+                            
+                            h2 {
+                                font-weight: normal;
+                                font-size: 2rem;
+                            }
+
+                            .res_txt_ex {
+                                margin-top: 15px;
+                            }
+
+                            p {
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        .btn_signin_group {
+                            margin: 0 auto;
+
+                            a {
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+                 .txt_row_noti {
+                    @include flex-column-center-y;
+                    gap: 25px;
+
+                    .txt_box_02 {
+                        display: none;
+                    }
+
+                    .res_txt_box_02 {
+                        display: block;
+                        text-align: center;
+                        line-height: 1.5;
+                        font-size: 1.4rem;
+                    }
+                    .btn_mgift {
+                       width: 250px;
+                       height: 38px;
+                    }
+                }
+            }
+        }
+    }
+}

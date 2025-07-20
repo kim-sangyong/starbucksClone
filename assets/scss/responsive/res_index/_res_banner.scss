@@ -1,0 +1,276 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+@media screen and (max-width: 1079px) {
+    .rewards_wrap {
+        .rewards_inner {
+            .rewards_box {
+                @include flex-column;
+
+                .rewards_logo_box {
+                    width: 22%;
+
+                    .rewards_logo {
+                        width: 100%;
+                    }
+                }
+
+                .txt_col_box {   
+                    gap: 10px;
+                    
+                    .txt_row_intro {    
+                        padding-bottom: 15px;
+                        gap: 121px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 970px부터 메인 이미지 opacity적용
+@media screen and (max-width: 970px) {
+    .res_main_slogan,
+    .res_drink_img01,
+    .res_drink_img02,
+    .res_drink_img03 {
+        opacity: $main-banner-opacity-hidden;
+        transition: opacity 1.2s;
+    }
+
+    .res_main_wrap {
+        .res_main_inner {
+            .res_slogan_box {
+                .res_main_slogan {
+                    opacity: $global-opacity-hidden;
+                    transition: all 1.2s;
+                }
+            }
+            .btn_slogan {
+                .res_btn {
+                    opacity: $global-opacity-hidden;
+                    transition: $a-hover-transition;
+
+                    &:hover {
+                        text-decoration: underline;
+                        background-color: #006e3f;
+                        color: $a-hover-txt-color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 태블릿
+@media screen and (min-width: 571px) and (max-width: 970px) {
+    .main_img_wrap {
+        display: none;
+    }
+    // 메인 시작
+    .res_main_wrap {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url('/assets/images/index-responsive/res_main_bg.jpg');
+        background-position: center;
+        background-size: cover;
+        width: auto;
+        height: 250vw;
+
+        .res_main_inner {
+            position: relative;
+            top: 7%;
+
+            .res_slogan_box {
+                margin: 0 auto;
+                width: 68%;
+
+                .res_main_slogan {
+                    width: 100%;
+                }
+            }
+
+            .res_img_box {
+                height: 100%;
+
+                .res_drink_box_01 {
+                    position: relative;
+                    top: 100px;
+                    left: 30px;
+                    width: 80%;
+                    max-width: 100%;
+
+                    .res_drink_img01 {
+                        width: 100%;
+                    }
+                }
+                .res_drink_box_02 {
+                    position: relative;
+                    bottom: 30px;
+                    left: 22%;
+                    width: 85%;
+                    max-width: 100%;
+
+                    .res_drink_img02 {
+                        width: 100%;
+                    }
+                }
+                .res_drink_box_03 {
+                    position: relative;
+                    left: 20px;
+                    bottom: 120px;
+                    width: 80%;
+                    max-width: 100%;
+
+                    .res_drink_img03 {
+                        width: 100%;
+                    }
+                }
+            }
+            .btn_slogan {
+                position: absolute;
+                margin: 0 auto;
+                bottom: 0px;
+                width: 100%;
+
+               a {
+                bottom: 50px;
+                @include flex-row-center-x-y;
+                margin: 0 auto;
+                width: 35%;
+                // height: 90px;
+                padding-top: 3vw;
+                padding-bottom: 3vw;
+                color: #006e3f;
+                border: 2px solid #006e3f;
+                font-size: 2.2rem;
+                font-weight: bold;
+                border-radius: 3px;
+               }
+            }
+        }
+    }
+}
+
+// 모바일
+@media screen and (max-width: 570px) {
+    .main_img_wrap {
+        display: none;
+    }
+
+    .res_main_wrap {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url('/assets/images/index-responsive/res_main_bg.jpg');
+        background-position: center;
+        background-size: cover;
+        width: auto;
+        height: 242vw;
+
+        .res_main_inner {
+            position: relative;
+            top: 7%;
+        
+            .res_slogan_box {
+                margin: 0 auto;
+                width: 60%;
+
+                .res_main_slogan {
+                    width: 100%;
+                }
+            }
+
+            .res_img_box {
+                height: 100%;
+
+                .res_drink_box_01 {
+                    position: relative;
+                    top: 70px;
+                    left: 35px;
+                    width: 72%;
+                    max-width: 100%;
+
+                    .res_drink_img01 {
+                        width: 100%;
+                    }
+                }
+                .res_drink_box_02 {
+                    position: relative;
+                    top: 40px;
+                    left: 27%;
+                    width: 77%;
+                    max-width: 100%;
+
+                    .res_drink_img02 {
+                        width: 100%;
+                    }
+                }
+                .res_drink_box_03 {
+                    position: relative;
+                    left: 40px;
+                    bottom: 20px;
+                    width: 72%;
+                    max-width: 100%;
+
+                    .res_drink_img03 {
+                        width: 100%;
+                    }
+                }
+            }
+            .btn_slogan {
+                position: absolute;
+                margin: 0 auto;
+                bottom: -70px;
+                width: 100%;
+
+               a {
+                @include flex-row-center-x-y;
+                margin: 0 auto;
+                width: 34%;
+                padding-top: 2.5vw;
+                padding-bottom: 2.5vw;
+                color: #006e3f;
+                border: 2px solid #006e3f;
+                font-size: 1.8rem;
+                font-weight: bold;
+                border-radius: 3px;
+               }
+            }
+        }
+    }
+}
+
+// 모바일
+@media screen and (max-width: 480px) {
+    .res_main_wrap {
+        height: 238vw;
+
+        .res_main_inner {
+            .res_img_box {
+                height: 100%;
+
+                .res_drink_box_01 {
+                    position: relative;
+                    top: 50px;
+                }
+                .res_drink_box_02 {
+                    position: relative;
+                    top: 0px;
+                }
+                .res_drink_box_03 {
+                    position: relative;
+                    bottom: 40px;
+                }
+            }
+
+            .btn_slogan {
+                position: absolute;
+                bottom: -40px;
+
+               a {
+                font-size: 1.6rem;
+               }
+            }
+        }
+    }
+}

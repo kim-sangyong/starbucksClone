@@ -1,0 +1,798 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+@media screen and (min-width:971px) and (max-width: 1135px) {  //max-width: 1116px
+    #header {
+        .header_wrap {
+            .main_nav {
+                gap: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+// 태블릿
+@media screen and (min-width: 768px) and (max-width: 970px) {
+    .header_wrap {
+        display: none;
+    }
+    #header {
+        height: 69px;
+    
+    .tablet_header_wrap {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        background-color: #f6f5ef;
+        height: 69px;
+        width: 100%;
+
+        .tablet_header_inner {
+            @include flex-row;
+            height: 100%;
+            
+            .tablet_logo_box {
+                margin-left: 15px;
+                display: inline;
+
+                .tablet_main_logo {
+                    width: 45px;
+                }
+            }
+        }
+        .tablet_nav_wrap {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .tablet_nav_inner {
+                margin-right: 15px;
+                @include flex-row-center-y;
+                gap: 32px;
+                z-index: 100;
+
+                .nav_main_img {
+                    width: 25px;
+                }
+            }
+        }
+
+        .tablet_menu_bg {
+            display: none;
+            position: fixed;
+            background: #000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+        }
+           .tablet_menu_wrap{
+                color: #ffffff;
+                               
+                .tablet_menu_inner {
+                    overflow: hidden;
+                    position: fixed;
+                    background-color: #111;
+                    height: 100%;
+                    width: 0;
+                    transition: width 0.4s;   
+                    right: 0;
+                    z-index: 200;
+            
+                    // tablet_menu_inner에 클래스 추가
+                    &.width_open {
+                        width: 70%;
+                        overflow: visible;
+                        overflow-y: auto;
+                    }
+                                                                     
+                    .menu_bg_brown {
+                        width: 100%;
+                        background-color: #2d2926;
+                        border-bottom: 1px solid #222;
+                        height: 120px;
+                        @include flex-row-center-y;
+                        justify-content: space-around;
+
+                         .menu_close_box {          
+                            .close_img {
+                                transform: rotate(0deg);
+                                transition: transform 0.5s;
+                            }
+                            // 클래스 추가
+                            .close_img.close_stew {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                            .search_form_tablet {
+                                @include flex-row;
+                                gap: 15px;
+
+                            .search_custom_tablet {
+                                border: 1px solid #e3e1d2;
+                                border-radius: 3px;
+                                height: 48px;
+                                width: 313px;
+                            }
+
+                            .visually_hidden_tablet {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                margin: -1px;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+
+                            }
+                            .tablet_search_btn {
+                                @include flex-row-center-x-y;
+                                background-color: #666;
+                                border-radius: 3px;
+                                color: $txt-primary-white;
+                                font-size: 2.4rem;
+                                height: 50px;
+                                width: 125px;
+                            }
+                        }
+                    }
+                    .tablet_nav_menu_wrap {
+                        width: 100%;
+                        font-size: 2.7rem;
+                        color: $txt-primary-white;
+                        
+                                               
+                            .tablet_menu_tit_01 {
+                                padding: 0 3vw;
+                                background-color: #2d2926;
+                                height: 76px;
+                                width: 100%;
+                                border-bottom: 1px solid #222;
+                                @include flex-row-center-y;
+
+                        
+                            }
+                             .tablet_menu_tit_02 {
+                                    padding: 0 3vw;
+                                    height: 76px;
+                                    width: 100%;
+                                    border-bottom: 1px solid #222;
+                                    @include flex-row-center-y;
+                                }
+                            .tablet_menu_btn {
+                                @include flex-row-center-y;
+                                width: 100%;
+                                justify-content: space-between;
+                            }
+
+                            .nav_list_item {
+                                @include flex-column;
+                                background-color: #181818;
+                                padding: 0 3vw;
+                                width: 100%;
+                                overflow: hidden;
+                                font-size: 2.7rem;
+                                height: 0;
+                                opacity: 0; // 메뉴가 닫히기 전에 list 사라지게 하기 위해 적용
+                                transition: all 0.4s;
+                                
+
+                                 &.list_item_down {
+                                    height: 76px;
+                                    opacity: 1;
+                                }
+
+                                .list_item_group {
+                                    display: none;
+                                }
+
+                                .list_item_btn {
+                                    @include flex-row-center-y;
+                                    width: 100%;
+                                    justify-content: space-between;
+                                    height: 76px;
+                                    border-bottom: 1px solid #222;
+                                }
+                            }  
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 531px) and (max-width: 767px) {
+    .header_wrap {
+        display: none;
+    }
+
+    #header {
+        height: 69px;
+
+    .tablet_header_wrap {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        background-color: #f6f5ef;
+        height: 69px;
+        width: 100%;
+
+        .tablet_header_inner {
+            @include flex-row;
+            height: 100%;
+            
+            .tablet_logo_box {
+                margin-left: 15px;
+                display: inline;
+
+                .tablet_main_logo {
+                    width: 45px;
+                }
+            }
+        }
+        .tablet_nav_wrap {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .tablet_nav_inner {
+                margin-right: 15px;
+                @include flex-row-center-y;
+                gap: 32px;
+                z-index: 100;
+
+                .nav_main_img {
+                    width: 25px;
+                }
+            }
+        }
+
+        .tablet_menu_bg {
+            display: none;
+            position: fixed;
+            background: #000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+        }
+           .tablet_menu_wrap{
+                color: #ffffff;
+                                  
+                .tablet_menu_inner {
+                    overflow: hidden;
+                    position: fixed;
+                    background-color: #111;
+                    height: 100%;
+                    width: 0;
+                    transition: width 0.4s;   
+                    right: 0;
+                    z-index: 200;
+     
+                    // tablet_menu_inner에 클래스 추가
+                    &.width_open {
+                        width: 70%;
+                        overflow: visible;
+                        overflow-y: auto;
+                    }
+                                                  
+                    .menu_bg_brown {
+                        padding: 0 3vw;
+                        width: 100%;
+                        background-color: #2d2926;
+                        border-bottom: 1px solid #222;
+                        height: 110px;
+                        @include flex-row-center-x-y;
+                        gap: 10%;
+
+                        .menu_close_box {                   
+                        .close_img {
+                            width: 22px;
+                            transform: rotate(0deg);
+                            transition: transform 0.5s;
+                        }
+                        // 클래스 추가
+                        .close_img.close_stew {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                        .search_form_tablet {
+                            @include flex-row-center-x-y;
+                            gap: 15px;
+
+                            .search_custom_tablet {
+                                border: 1px solid #e3e1d2;
+                                border-radius: 3px;
+                                height: 48px;
+                                width: 190px;
+                            }
+
+                            .visually_hidden_tablet {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                margin: -1px;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+                            }
+
+                            .tablet_search_btn {
+                                @include flex-row-center-x-y;
+                                background-color: #666;
+                                border-radius: 3px;
+                                color: $txt-primary-white;
+                                font-size: 1.8rem;
+                                height: 50px;
+                                width: 95px;
+                            }
+                        }
+                    }
+                    .tablet_nav_menu_wrap {
+                        width: 100%;
+                        font-size: 1.8rem;
+                        color: $txt-primary-white;
+                                                                   
+                            .tablet_menu_tit_01 {
+                                padding: 0 3vw;
+                                background-color: #2d2926;
+                                height: 76px;
+                                width: 100%;
+                                border-bottom: 1px solid #222;
+                                @include flex-row-center-y;   
+                            }
+
+                             .tablet_menu_tit_02 {
+                                    padding: 0 3vw;
+                                    height: 76px;
+                                    width: 100%;
+                                    border-bottom: 1px solid #222;
+                                    @include flex-row-center-y;
+                            }
+                            .tablet_menu_btn {
+                                @include flex-row-center-y;
+                                width: 100%;
+                                justify-content: space-between;
+                            }
+
+                            .nav_list_item {
+                                @include flex-row-center-y;
+                                background-color: #181818;
+                                padding: 0 3vw;
+                                width: 100%;
+                                overflow: hidden;
+                                font-size: 1.8rem;
+                                height: 0;
+                                opacity: 0; // 메뉴가 닫히기 전에 list 사라지게 하기 위해 적용
+                                transition: all 0.4s;
+                                
+                                 &.list_item_down {
+                                    height: 76px;
+                                    opacity: 1;
+                                }
+
+                                .list_item_group {
+                                    display: none;
+                                }
+
+                                .list_item_btn {
+                                    @include flex-row-center-y;
+                                    width: 100%;
+                                    justify-content: space-between;
+                                    height: 76px;
+                                    border-bottom: 1px solid #222;
+                                }
+                            }  
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 모바일
+@media screen and (min-width: 421px) and (max-width: 530px) {
+    .header_wrap {
+        display: none;
+    }
+    
+    #header {
+        height: 69px;
+
+    .tablet_header_wrap {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        background-color: #f6f5ef;
+        height: 69px;
+        width: 100%;
+
+        .tablet_header_inner {
+            @include flex-row;
+            height: 100%;
+            // padding: 0 2vw;
+            
+            .tablet_logo_box {
+                margin-left: 15px;
+                display: inline;
+
+                .tablet_main_logo {
+                    width: 45px;
+                }
+            }
+        }
+        .tablet_nav_wrap {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .tablet_nav_inner {
+                margin-right: 15px;
+                @include flex-row-center-y;
+                gap: 32px;
+                z-index: 100;
+
+                .nav_main_img {
+                    width: 25px;
+                }
+            }
+        }
+
+        .tablet_menu_bg {
+            display: none;
+            position: fixed;
+            background: #000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+        }
+           .tablet_menu_wrap{
+                color: #ffffff;
+                            
+                .tablet_menu_inner {
+                    overflow: hidden;
+                    position: fixed;
+                    background-color: #111;
+                    height: 100%;
+                    width: 0;
+                    transition: width 0.4s;   
+                    right: 0;
+                    z-index: 200;
+           
+                    // tablet_menu_inner에 클래스 추가
+                    &.width_open {
+                        width: 70%;
+                        overflow: visible;
+                        overflow-y: auto;
+                    }
+                                                                     
+                    .menu_bg_brown {
+                        padding: 0 3vw;
+                        width: 100%;
+                        background-color: #2d2926;
+                        border-bottom: 1px solid #222;
+                        height: 80px;
+                        @include flex-row-center-y;
+                        justify-content: space-around;
+
+                        .menu_close_box {                          
+                        .close_img {
+                            width: 19px;
+                            transform: rotate(0deg);
+                            transition: transform 0.5s;
+                        }
+                        // 클래스 추가
+                        .close_img.close_stew {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                        .search_form_tablet {
+                            @include flex-row-center-x-y;
+                            gap: 15px;
+
+                            .search_custom_tablet {
+                                border: 1px solid #e3e1d2;
+                                border-radius: 3px;
+                                height: 30px;
+                                width: 140px;
+                            }
+
+                            .visually_hidden_tablet {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                margin: -1px;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+
+                            }
+                            .tablet_search_btn {
+                                @include flex-row-center-x-y;
+                                background-color: #666;
+                                border-radius: 3px;
+                                color: $txt-primary-white;
+                                font-size: 1.4rem;
+                                height: 30px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                    .tablet_nav_menu_wrap {
+                        width: 100%;
+                        font-size: 1.4rem;
+                        color: $txt-primary-white;
+                                                                      
+                            .tablet_menu_tit_01 {
+                                padding: 0 3vw;
+                                background-color: #2d2926;
+                                height: 60px;
+                                width: 100%;
+                                border-bottom: 1px solid #222;
+                                @include flex-row-center-y;                      
+                            }
+
+                             .tablet_menu_tit_02 {
+                                    padding: 0 3vw;
+                                    height: 60px;
+                                    width: 100%;
+                                    border-bottom: 1px solid #222;
+                                    @include flex-row-center-y;
+                                }
+                            .tablet_menu_btn {
+                                @include flex-row-center-y;
+                                width: 100%;
+                                justify-content: space-between;
+                            }
+
+                            .nav_list_item {
+                                @include flex-row-center-y;
+                                background-color: #181818;
+                                padding: 0 3vw;
+                                width: 100%;
+                                overflow: hidden;
+                                font-size: 1.4rem;
+                                height: 0;
+                                opacity: 0; // 메뉴가 닫히기 전에 list 사라지게 하기 위해 적용
+                                transition: all 0.4s;
+                                
+                                &.list_item_down {
+                                    height: 60px;
+                                    opacity: 1;
+                                }
+
+                                .list_item_group {
+                                    display: none;
+                                }
+
+                                .list_item_btn {
+                                    @include flex-row-center-y;
+                                    width: 100%;
+                                    justify-content: space-between;
+                                    height: 76px;
+                                    border-bottom: 1px solid #222;
+                                }
+                            }  
+                        }
+                    }
+            }
+        }
+    }
+}
+
+// 모바일
+@media screen and (max-width: 420px) {
+    .header_wrap {
+        display: none;
+    }
+
+    #header {
+        height: 69px;
+
+    .tablet_header_wrap {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        background-color: #f6f5ef;
+        height: 69px;
+        width: 100%;
+
+        .tablet_header_inner {
+            @include flex-row;
+            height: 100%;
+            
+            .tablet_logo_box {
+                margin-left: 15px;
+                display: inline;
+
+                .tablet_main_logo {
+                    width: 45px;
+                }
+            }
+        }
+        .tablet_nav_wrap {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .tablet_nav_inner {
+                margin-right: 15px;
+                @include flex-row-center-y;
+                gap: 32px;
+                z-index: 100;
+
+                .nav_main_img {
+                    width: 25px;
+                }
+            }
+        }
+
+        .tablet_menu_bg {
+            display: none;
+            position: fixed;
+            background: #000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+        }
+           .tablet_menu_wrap{
+                color: #ffffff;
+                                 
+                .tablet_menu_inner {
+                    overflow: hidden;
+                    position: fixed;
+                    background-color: #111;
+                    height: 100%;
+                    width: 0;
+                    transition: width 0.4s;   
+                    right: 0;
+                    z-index: 200;
+           
+                    // tablet_menu_inner에 클래스 추가
+                    &.width_open {
+                        width: 70%;
+                        overflow: visible;
+                        overflow-y: auto;
+                    }
+                                                                    
+                    .menu_bg_brown {
+                        width: 100%;
+                        background-color: #2d2926;
+                        border-bottom: 1px solid #222;
+                        height: 80px;
+                        @include flex-row-center-y;
+                        justify-content: space-around;
+
+                        .menu_close_box {
+                        .close_img {
+                            width: 15px;
+                            transform: rotate(0deg);
+                            transition: transform 0.5s;
+                        }
+                        // 클래스 추가
+                        .close_img.close_stew {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                            .search_form_tablet {
+                                @include flex-row-center-x-y;
+                                gap: 7px;
+
+                            .search_custom_tablet {
+                                border: 1px solid #e3e1d2;
+                                border-radius: 3px;
+                                height: 30px;
+                                width: 120px;
+                            }
+
+                            .visually_hidden_tablet {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                margin: -1px;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+
+                            }
+                            .tablet_search_btn {
+                                @include flex-row-center-x-y;
+                                background-color: #666;
+                                border-radius: 3px;
+                                color: $txt-primary-white;
+                                font-size: 1.4rem;
+                                height: 30px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                    .tablet_nav_menu_wrap {
+                        width: 100%;
+                        font-size: 1.4rem;
+                        color: $txt-primary-white;
+                        
+                                               
+                            .tablet_menu_tit_01 {
+                                padding: 0 3vw;
+                                background-color: #2d2926;
+                                height: 60px;
+                                width: 100%;
+                                border-bottom: 1px solid #222;
+                                @include flex-row-center-y;
+
+                        
+                            }
+                            .tablet_menu_tit_02 {
+                                padding: 0 3vw;
+                                height: 60px;
+                                width: 100%;
+                                border-bottom: 1px solid #222;
+                                @include flex-row-center-y;
+                            }
+                            .tablet_menu_btn {
+                                @include flex-row-center-y;
+                                width: 100%;
+                                justify-content: space-between;
+
+                                img {
+                                    width: 16px;
+                                }
+                            }
+
+                            .nav_list_item {
+                                @include flex-row-center-y;
+                                background-color: #181818;
+                                padding: 0 3vw;
+                                width: 100%;
+                                overflow: hidden;
+                                font-size: 1.3rem;
+                                height: 0;
+                                opacity: 0; // 메뉴가 닫히기 전에 list 사라지게 하기 위해 적용
+                                transition: all 0.4s;
+                                
+
+                                 &.list_item_down {
+                                    height: 60px;
+                                    opacity: 1;
+                                }
+
+                                .list_item_group {
+                                    display: none;
+                                }
+
+                                .list_item_btn {
+                                    @include flex-row-center-y;
+                                    width: 100%;
+                                    justify-content: space-between;
+                                    height: 76px;
+                                    border-bottom: 1px solid #222;
+                                }
+                            }  
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #header {
+    .tablet_header_wrap {
+        .tablet_nav_wrap {
+            .tablet_nav_inner {
+                margin-right: 13px;
+                @include flex-row-center-y;
+                gap: 25px;
+            }
+        }
+           .tablet_menu_wrap{                         
+                .tablet_menu_inner {                       
+                    .tablet_nav_menu_wrap {
+                        width: 100%;
+                        font-size: 1.4rem;
+                        color: $txt-primary-white;
+                    }
+                }
+            }
+        }
+    }
+}

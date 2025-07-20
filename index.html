@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 구 IE 이용시 최신으로 렌더링 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 기본 메타 태그 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="스타벅스 코리아 클론 코딩 사이트입니다." />
+        <meta name="keywords" content="스타벅스 코리아 클론 코딩, 클론 코딩, 퍼블리셔 프로젝트, 
+                                        프론트엔드 프로젝트, 개발자, 프로젝트, 개인 프로젝트, 포트폴리오
+                                        퍼블리셔 포트폴리오, 프론트엔드 개발자 포트폴리오" />
+        <meta name="author" content="개인 프로젝트" />
+        <!-- 검색 엔진 크롤링 -->
+        <meta name="robots" content="index, follow" />
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="스타벅스 코리아 클론 코딩" />
+        <meta property="og:title" content="스타벅스 코리아 클론 코딩" />
+        <meta property="og:description" content="스타벅스 코리아 클론 코딩 사이트입니다." />
+        <!-- <meta property="og:url" content="" />  배포 하고 작성 -->
+        <meta property="og:image" content="https://raw.githubusercontent.com/kim-sangyong/ogImg/main/starbucks_og_img.jpg" />
+        <!-- Twitter Card 기본 메타태그 -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- <meta name="twitter:site" content="" /> -->
+        <meta name="twitter:title" content="스타벅스 코리아 클론 코딩" />
+        <meta name="twitter:description" content="스타벅스 코리아 클론 코딩 사이트입니다." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/kim-sangyong/ogImg/main/starbucks_og_img.jpg" />
+
+        <!-- CSS -->
+        <link href="assets/css/normalize.css" rel="stylesheet">
+        <link href="assets/css/common.css" rel="stylesheet">
+        <link href="assets/css/header.css" rel="stylesheet">
+        <link href="assets/css/index.css" rel="stylesheet">
+        <link href="assets/css/footer.css" rel="stylesheet">
+        <!-- 반응형 css -->
+         
+
+        <!-- Swiper CSS -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+        <!-- 파비콘 추가 -->
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <!-- 타이틀 -->
+        <title>스타벅스 코리아 클론 코딩</title>
+        <!-- jQuery CDN 추가 -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+         <!-- <div id="wrap"> -->
+                <!-- 헤더 삽입 -->
+                <div id="header"></div>
+
+                <!-- 메인 시작 (메인 이미지)  -->
+                <div class="main_img_wrap">
+                        <div class="main_img_box">
+                            <div class="main_btn_wrap">
+                                <img src="/assets/images/top_slogan.png" alt="LIGHT UP YOUR SUMMER" class="textImg" id="main_img_opacity">
+                                <a href="#" id="main_btn_opacity">
+                                    자세히 보기
+                                </a>
+                            </div>
+                            <div class="slogan_img_box">
+                                <img src="/assets/images/top_drink02.png" alt="더블 머스켓 블렌디드" class="drinkImg" id="double_opacity">
+                                <img src="/assets/images/top_drink01.png" alt="자몽 망고 코코넛 프라푸치노" class="drinkImg" id="mango_opacity">
+                                <img src="/assets/images/top_drink03.png" alt="씨솔트 카라멜 콜드 브루" class="drinkImg" id="salt_opacity">
+                            </div>
+                        </div>
+                </div>
+                <!-- tablet, mobile 메인  -->
+                 <div class="res_main_wrap">
+                    <div class="res_main_inner">
+                        <div class="res_slogan_box">
+                            <img src="/assets/images/index-responsive/res_text_img.png" alt="LIGHT UP YOUR SUMMER" class="res_main_slogan"
+                                id="main_slogan_op">
+                        </div>
+                        <div class="res_img_box">
+                            <div class="res_drink_box_01">
+                                <img src="/assets/images/index-responsive/res_drink01.png" alt="자몽 망고 코코넛 프라푸치노" class="res_drink_img01"
+                                    id="drink_img01_op">
+                            </div>
+                            <div class="res_drink_box_02">
+                                <img src="/assets/images/index-responsive/res_drink02.png" alt="더블 머스켓 블렌디드" class="res_drink_img02"
+                                    id="drink_img02_op">
+                            </div>
+                            <div class="res_drink_box_03">
+                                <img src="/assets/images/index-responsive/res_drink03.png" alt="씨솔트 카라멜 콜드 브루" class="res_drink_img03"
+                                    id="drink_img03_op">
+                            </div>
+                        </div>
+                        <div class="btn_slogan">
+                            <a href="#" class="res_btn" id="res_btn_op">
+                                자세히 보기
+                            </a>
+                        </div>
+                    </div>
+                 </div>
+            <!-- 공지사항, 스타벅스 프로모션 -->
+            <section class="line_noti">
+                <div class="line_noti_black">
+                    <dl class="noti_black_inner">
+                        <img src="/assets/images/index-responsive/noti_speaker.png" alt="공지사항" class="noti_speaker">
+                        <dt>공지사항</dt>
+                        <!-- <dd>
+                            스타벅스 카드 결제수단 추가 안내
+                        </dd> -->
+                    </dl>
+                </div>
+                    <div class="line_noti_whtie">
+                        <a class="noti_white_inner" id="show_swiper_btn" href="#">
+                            <p>스타벅스 프로모션</p>
+                            <img src="/assets/images/btn_down.png" alt="프로모션 펼치기" role="button" id="noti_btn">
+                        </a>
+                    </div>
+            </section>
+
+            <!-- 스타벅스 프로모션 슬라이드 -->
+            <section class="swiper slider_wrap">
+                <div class="swiper-wrapper slider_inner">
+                    <div class="swiper-slide slider_item">
+                        <img src="/assets/images/slider-images/slider-img01.jpg" alt="슬라이드 1">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide slider_item">
+                        <img src="/assets/images/slider-images/slider-img02.jpg" alt="슬라이드 2">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide slider_item">
+                        <img src="/assets/images/slider-images/slider-img01.jpg" alt="슬라이드 3">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide slider_item">
+                        <img src="/assets/images/slider-images/slider-img02.jpg" alt="슬라이드 4">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+                <!-- Optional navigation buttons  -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </section>
+
+            <!-- 스타벅스 리워드 -->
+            <section class="rewards_wrap">
+                <div class="rewards_inner">
+                    <div class="rewards_box">
+                        <div class="rewards_logo_box">
+                            <img src="/assets/images/rewards-logo.png" alt="스타벅스 리워드" class="rewards_logo">
+                        </div>
+                        <div class="txt_col_box">
+                            <div class="txt_row_intro">
+                                <div class="txt_box_01">
+                                    <h2 class="txt_tit">스타벅스만의 특별한 혜택, <strong>스타벅스 리워드</strong></h2>
+                                    <p><strong>스타벅스 회원이세요? </strong>로그인을 통해 나만의 리워드를 확인해보세요.</p>
+                                    <p><strong>스타벅스 회원이 아니세요? </strong>가입을 통해 리워드 혜택을 즐기세요.</p>
+                                </div>
+                                <!-- max-883px -->
+                                    <div class="res_txt_box_01">
+                                        <h2>
+                                            스타벅스만의 특별한 혜택,<br>
+                                            <strong>스타벅스 리워드</strong>
+                                        </h2>
+                                        <p class="res_txt_ex">
+                                            <strong>스타벅스 회원이세요?<br> </strong>
+                                            로그인을 통해 나만의 리워드를 확인해보세요.
+                                        </p>
+                                        <p>
+                                            <strong>스타벅스 회원이 아니세요?<br> </strong>
+                                            가입을 통해 리워드 혜택을 즐기세요.
+                                        </p>
+                                    </div>
+
+                                <div class="btn_signin_group">
+                                    <a href="#" class="btn_signin_join">회원가입</a>
+                                    <a href="#" class="btn_signin_login">로그인</a>
+                                </div>
+                            </div>
+
+                            <div class="txt_row_noti">
+                                <div class="txt_box_02">
+                                    <p>회원 가입 후, 스타벅스 모바일 카드를 <strong>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</strong></p>
+                                    <p>카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!</p>
+                                </div>
+
+                                <!-- max-883px -->
+                                 <div class="res_txt_box_02">
+                                    <p>
+                                        회원 가입 후, 스타벅스 모바일 카드를<br> 
+                                        <strong>
+                                            "나에게 선물하기"로 구매하시고,<br> 
+                                             편리하게 등록하세요!
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        카드를 등록하여 스타벅스 리워드 회원이 되신 후,<br>
+                                        첫 구매를 하시면 무료 음료쿠폰을 드립니다!
+                                    </p>
+                                 </div>
+
+                                    <div class="btn_mgift">
+                                        <a href="#">스타벅스 모바일 카드 선물하기</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 콜롬비아 라니뇨 -->
+            <section class="colombia_wrap">
+                <div class="colombia_inner">
+                    <div class="colombia_img_box">
+                        <img src="/assets/images/summer_promotion_beans.png" alt="콜롬비아 라니뇨 250g" class="coffee_bean" id="coffee_scroll_event">
+                        <img src="/assets/images/index-responsive/res_promotion_beans.png" alt="콜롬비아 라니뇨 250g" class="res_coffee_bean"
+                                 id="res_coffee_scroll_event">
+                    </div>
+                    <div class="colombia_con_box" id="colombia_scroll_event">
+                        <!-- pc -->
+                        <div class="pc_txt_con">
+                            <h2 class="colombia_tit">콜롬비아 나리뇨 250g</h2>
+                            <p>안덱스 산맥과 아마존 우림의 영향을 받아 생산된 특별한 콜롬비아 나리뇨는</p>
+                            <p>스타벅스만의 전문적인 로스팅을 통해 풍부하고 고급스러운 헤이즐넛의</p>
+                            <p>고소한 풍미를 느낄 수 있습니다.</p>
+                        </div>
+                        <!-- 반응형 -->
+                        <div class="res_txt_con" id="res_txt_event">
+                             <h2 class="res_colombia_tit">콜롬비아 나리뇨 250g</h2>
+                            <p>
+                                안덱스 산맥과 아마존 우림의 영향을 받아
+                                <br>
+                                생산된 특별한 콜롬비아 나리뇨는
+                            </p>
+                            <p>
+                                스타벅스만의 전문적인 로스팅을 통해 풍부하고
+                                <br> 
+                                고급스러운 헤이즐넛의 고소한 풍미를
+                            </p>
+                            <p>느낄 수 있습니다.</p>
+                        </div>
+                        <div class="colombia_btn_box" id="btn_event">
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 리저브 커피 -->
+            <section class="reserve_wrap">
+                <div class="reserve_inner">
+                    <div class="reserve_col">
+                        <img src="/assets/images/reserve_logo.png" alt="스타벅스 리저브 로고" class="reserve_logo">
+                        <img src="/assets/images/index-responsive/res_reserve_bg.jpg" alt="콜롬비아 그라노스 데 에스파란자"
+                                     class="res_colombia_img">
+                        <div class="reserve_link_box">
+                            <a href="#" class="reserve_link">자세히 보기</a>
+                        </div>
+                    </div>
+                    <img src="/assets/images/reserve_coffee.png" alt="스타벅스 리저브 커피" class="reserve_coffee">
+                </div>
+            </section>
+
+            <!-- Pick Your Favorite  -->
+            <section class="fav_wrap">
+                <div class="fav_inner">
+                    <div class="fav_txt_box">
+                        <div class="fav_txt01" id="fav_scroll_title">
+                            <strong>PICK<br/>YOUR<br/><span class="fav_txt01_size">FAVORITE</span></strong>
+                        </div>
+                        <div class="fav_txt02" id="fav_scroll_txt">
+                            <strong class="fav_txt02_tit">다양한 메뉴를<br/>스타벅스에서 즐겨보세요</strong>
+                                <p>스타벅스만의 특별함을 경험할 수 있는 최상의 선택 <span>음료</span></p>
+                                <p>스타벅스 커피와 완벽한 어울림을 자랑하는 <span>푸드</span></p>
+                                <p>다양한 시도와 디자인으로 가치를 더하는 <span>상품</span></p>
+                                <p>소중한 사람들에게 마음을 전하는 가장 좋은 방법 <span>스타벅스 카드</span></p>
+                        </div>
+                        <div class="fav_btn_box" id="fav_opacity">
+                            <a href="#" class="fav_btn">자세히 보기</a>
+                        </div>
+                    </div>
+                        <!-- 883px부터 hidden -->
+                        <div class="fav_img_box">
+                            <img src="/assets/images/pick_img.png" alt="스타벅스 다양한 상품" class="fav_img">
+                        </div>
+                </div>
+            </section>
+
+            <!-- RESERVE MAGAZINE -->
+            <section class="reserve_magazine_wrap">
+                <div class="magazine_inner">
+                    <div class="magazine_tit">
+                        <img src="/assets/images/reserve_title.png" alt="리저브 매거진과 함께 깊어가는 가을을 즐겨보세요" class="magazine_img">
+                        <div class="magazine_btn_box">
+                            <a href="#" class="magazine_btn">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="reserve_visual_box" id="reserve_opacity">
+                        <img src="/assets/images/reserve_visual.png" alt="리저브 매거진" class="visual_img">
+                        <img src="/assets/images/index-responsive/res_reserve_visual.jpg" alt="리저브 매거진" class="res_visual_img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 스토어 -->
+            <section class="store_wrap">
+                <div class="store_inner">
+                        <!-- background-image -->
+                        <div class="store_img03_box"></div>
+
+                    <div class="img_txt_box">
+                        <div class="img_box" id="store_opacity">
+                            <img src="/assets/images/store_img.png" alt="" class="store_img">
+                        </div>
+                        <div class="store_txt_box">
+                            <div class="store_txt01" id="store_scroll_01">
+                                <p class="store_txt_tit"><span>전국 어디에서나 </span><strong>스타벅스와 함께!</strong></p>
+                                <p>스타벅스와 함께 커피 한잔의 여유를 가져보세요.</p>
+                            </div>
+                            <div class="store_txt02" id="store_scroll_02">
+                                <p>나의 취향이 머무는 곳, 스타벅스 <strong>리저브 매장</strong></p>
+                                <p>더욱 편리하게 스타벅스를 만나보는 <strong>드라이브 스루 매장</strong></p>
+                                <p>함께해서 더 따뜻한 지역사회 소통 공간, <strong>커뮤니티 스토어 </strong>까지.</p>
+                                <p class="store_txt02_last">다양한 스타벅스 매장이 여러분을 기다립니다.</p>
+                            </div>
+                            <div class="store_btn" id="store_scroll_03">
+                                <a href="#">매장 찾기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="/assets/images/index-responsive/res_store_bottom.png" alt="" class="res_store_bottom">
+                </div>
+            </section>
+              
+            <!-- 푸터 삽입 -->
+            <div id="footer"></div>
+          <!-- </div> -->
+           
+        <!-- mainScrollEvent.js -->
+        <script src="/assets/js/mainScrollEvent.js"></script>
+        <!-- slider.js -->
+        <script src="/assets/js/mainSlider.js"></script>  
+        <script>       
+            $(function() {
+                // header.html 파일을 불러와서 #header에 삽입
+                $("#header").load("/components/header.html");
+
+                // footer.html 파일을 불러와서 #footer에 삽입
+                $("#footer").load("/components/footer.html");
+            });
+        </script>
+    </body>
+</html>

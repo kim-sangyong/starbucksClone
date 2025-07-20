@@ -1,0 +1,701 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// 공통 스타일 섹션
+// .textImg,
+.drinkImg {
+  opacity: $main-banner-opacity-hidden;
+  transition: opacity 1.2s;
+}
+
+.main_img_wrap {
+    height: 40vw;
+    min-height: 600px;
+    background-image: url('/assets/images/top_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex-row-center-x-y;
+
+    
+    .main_img_box {
+        overflow: hidden; // 이미지 가 넘쳐서 가로 스크롤 생김
+        position: relative;
+        top: 15px; // 이쪽 top 너무 많아지면 슬라이더 내려오는거 클릭 안됨
+        @include flex-row-center-x-y;
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 0 5vw;
+        height: auto;
+        width: 100%;
+    }
+    .main_btn_wrap {
+        @include flex-column-center-y;
+        gap: 40px;
+        width: 57%;
+        margin-top: 40px;
+
+        .textImg {
+            width: 75%;
+            opacity: $global-opacity-hidden;
+            transition: all 1.2s;
+        }   
+
+            a {
+                min-width: 125px;
+                width: 22%;
+                height: 40px;
+                font-size: 1.4rem;
+                border-radius: $a-border-radius-base;
+                @include flex-row-center-x-y;
+                color: #f29440;
+                opacity: $global-opacity-hidden;
+                border: 2px solid #f29440;
+                transition: $a-hover-transition;
+
+                &:hover {
+                    background-color: #f29440;
+                    color: $a-hover-txt-color-white;
+                    text-decoration: underline;
+            }
+        }
+    }
+
+        .slogan_img_box {
+            @include flex-row-center-x-y;
+            position: relative;
+            left: 50px;
+            margin-top: 50px;
+            height: 100%;
+            width: 80%;
+                      
+            .drinkImg{
+                max-width: 40%;   
+            }
+        }
+    }
+    // 970px 부터 보여짐
+    .res_main_wrap {
+        display: none;
+    }
+    // 공지사항, 스타벅스 프로모션
+    .line_noti {
+        @include flex-row;
+        width: 100%;
+
+        .line_noti_black {
+            @include flex-row-center-x-y;
+            font-size: 1.8rem;
+            width: 50%;
+            height: 70px;
+            background-color: #111;
+            color: #ffffff;
+
+            .noti_black_inner {
+                .noti_speaker {
+                    display: none;
+                }
+            }
+        }
+        .line_noti_whtie {
+            @include flex-row-center-x-y;
+            background-color: #f6f5ef;
+            font-size: 1.8rem;
+            width: 50%;
+            height: 70px;
+
+            .noti_white_inner {
+                @include flex-row-center-y;
+                gap: 60px;
+        }
+    }
+}
+
+// 스타벅스 프로모션 슬라이드
+.slider_wrap {
+    background-color: #f6f5ef;
+    border-top: 1px solid #f6f5ef;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+
+    .slider_inner {
+        margin-top: 20px;
+        
+        .slider_item {
+            position: relative;
+            @include flex-column-center-x-y;
+            
+            img {
+                max-width: 100%;
+                display: block;
+            }
+            
+            a {
+                @include flex-row-center-x-y;
+                border: 2px solid #222;
+                border-radius: $a-border-radius-base;
+                color: #222;
+                font-size: 1.4rem;
+                height: 40px;
+                width: 121px;
+                transition: $a-hover-transition;
+
+                &:hover {
+                    background-color: #222;
+                    color: $a-hover-txt-color-white;
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    // 기존 스와이프 화살표 X
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        display: none;
+    }
+
+    // 공통 css
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 51px;
+        height: 51px;
+        border: 2px solid #222;
+        border-radius: 28px;
+    }
+
+    .swiper-button-prev {
+        left: 25%;
+        background-image: url('/assets/images/slider-images/prev_arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: transparent;
+    }
+    .swiper-button-next {
+        right: 25%;
+        background-image: url('/assets/images/slider-images/next_arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: transparent;
+    }   
+}
+// 케러셀 클래스 추가
+.slider_wrap.open {
+  height: 42vw; // 620px;
+}
+
+// 스타벅스 리워드
+.rewards_wrap {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: #1e3932;
+
+    .rewards_inner {
+        @include flex-row-center-x-y;
+        color: $txt-primary-white;
+
+        .rewards_box {
+            @include flex-row-center-x-y;
+            gap: 30px;
+
+             .rewards_logo_box {
+                width: 15%;
+
+                .rewards_logo {
+                    width: 100%;
+                }
+            }
+
+            .txt_col_box {
+                @include flex-column;
+                gap: 20px;
+                
+                .txt_row_intro{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    gap: 122px;
+                    font-size: 1.7rem;
+                    border-bottom: 1px solid #4b615b;
+                    padding-bottom: 18px;
+
+                    .txt_box_01 {
+                        @include flex-column;
+                    }
+                    .txt_tit {
+                        font-weight: normal;
+                        margin-bottom: 20px;
+                    }
+                    // res max-width: 883px
+                    .res_txt_box_01 {
+                        display: none;
+                    }
+
+                    .btn_signin_group {
+                        @include flex-row;
+                        gap: 10px;
+                        
+                        a {
+                            @include flex-row-center-x-y;
+                            padding-left: 21.4px;
+                            padding-right: 21.4px;
+                            height: 38px;
+                            font-size: 1.4rem;
+                            border-radius: $a-border-radius-base;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                        .btn_signin_join {
+                            background-color: #00704a;
+                            border: 2px solid #00704a;
+                        }
+                        .btn_signin_login {
+                            background-color: transparent;
+                            border: 2px solid #fff;
+                        }
+                    }
+
+                    .txt_box_02 {
+                        @include flex-column;
+                    }
+                }
+            }
+
+            .txt_row_noti {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                gap: 57px;
+                font-size: 1.4rem;
+
+                .res_txt_box_02 {
+                    display: none;
+                }
+
+                .btn_mgift {
+                    width: 193px;
+                    height: 38px;
+                    line-height: 36px;
+                    text-align: center;
+                    font-size: 14px;
+                    border: 2px solid #fff;
+                    border-radius: $a-border-radius-base;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 콜롬비아 라니뇨
+.colombia_wrap {
+    background-image: url('/assets/images/summer_promotion_bg.png');
+    background-repeat: no-repeat;
+    height: 560px;
+    @include flex-row-center-y;
+
+    .colombia_inner {
+        width: 100%;
+        @include flex-row-center-x-y;
+        overflow: hidden;
+
+        .colombia_img_box {
+            width: 17%;
+
+            .coffee_bean {
+                width: 90%;
+                max-width: 100%;
+                transform: translateX(-250%);
+                transition: all 1.5s ease-in-out; 
+                opacity: $global-opacity-hidden;
+            }
+
+            .res_coffee_bean {
+                display: none;
+            }
+        }
+
+        .colombia_con_box {
+            transform: translateX(210%);
+            transition: all 2s ease-out;
+            opacity: $global-opacity-hidden;
+            color: $txt-primary-white;
+            font-size: 1.6rem;
+            @include flex-column;
+            line-height: 1.5;
+
+            a {
+                margin-top: 40px;
+                @include flex-row-center-x-y;
+                height: 38px;
+                width: 120px;
+                border: 2px solid $a-hover-txt-color-white;
+                border-radius: $a-border-radius-base;
+                transition: $a-hover-transition;
+
+                &:hover {
+                    background-color: $a-hover-txt-color-white;
+                    color: #0f8ac3;
+                    text-decoration: underline
+                }
+            }
+            
+            .res_txt_con {
+                display: none;
+            }
+
+            .colombia_tit {
+                font-size: 3.5rem;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+// 리저브 커피
+.reserve_wrap {
+    @include flex-row-center-x;
+    width: 100%;
+    background-image: url('/assets/images/reserve_bg.jpg');
+    height: 400px;
+
+    .reserve_inner {
+        @include flex-row-center-x-y;
+        gap: 100px;
+        padding: 0 5vw;
+        
+        .reserve_col {
+            @include flex-column-center-y;
+            gap: 30px;
+
+            .reserve_logo {
+                width: 90%;
+            }
+
+            .res_colombia_img {
+                display: none;
+            }
+
+            .reserve_link_box {
+                position: relative;
+                left: 40px;
+                width: 125px;
+                height: 38px;
+                font-size: 1.4rem;
+
+                .reserve_link {
+                    @include flex-row-center-x-y;
+                    width: 100%;
+                    height: 100%;    
+                    color: #ba6e36;
+                    border: 2px solid #ba6e36;
+                    border-radius: $a-border-radius-base;
+                    transition: $a-hover-transition;
+
+                    &:hover {
+                        background-color: #ba6e36;
+                        color: $a-hover-txt-color-white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .reserve_coffee {
+            opacity: $global-opacity-hidden;
+            transition: opacity 1.5s linear;
+            width: 40%;
+        }
+    }
+}
+
+// Pick Your Favorite
+.fav_wrap {
+    background-image: url('/assets/images/pick_bg.png');
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #45434c; // 이미지가 로딩되기전 비어보이는걸 방지
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    
+
+    .fav_inner {
+        position: relative;
+        padding: 0 5vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;       
+        gap: 100px;
+        
+
+        .fav_txt_box {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            align-items: flex-end;
+            color: $txt-primary-white;
+            white-space: nowrap;
+
+            .fav_txt01 {
+                font-size: 7.5rem;
+                line-height: 1.1;
+                transform: translateX(-315%);
+                opacity: $global-opacity-hidden;
+                transition: all 2s;
+            
+            .fav_txt01_size {   
+                display: block;
+                font-weight: normal;
+                font-size: 5rem;
+            }
+        }
+        .fav_txt02 {
+            font-size: 1.6rem;
+            line-height: 1.4;
+            margin-top: 40px;
+            transform: translateX(-170%);
+            opacity: $global-opacity-hidden;
+            transition: all 2.8s;
+
+            span {  // span만 Extra Bold 처리
+                font-weight: 800;
+            }
+
+            .fav_txt02_tit {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }       
+        }
+
+            .fav_btn_box {
+                width: 125px;
+                height: 38px;
+                border: 2px solid #fff;
+                border-radius: $a-border-radius-base;
+                margin-top: 25px;
+                opacity: $global-opacity-hidden;
+                transition: all 1.8s ease-out;
+
+                .fav_btn {
+                    @include flex-row-center-x-y;
+                    width: 100%;
+                    height: 100%;
+                    color: $txt-primary-white;
+                    font-size: 1.4rem;
+                    transition: $a-hover-transition;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #222;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .fav_img_box {
+            width: 100%;
+
+            .fav_img {
+                width: 90%;
+            }
+        }
+    }
+}
+
+// resereve_magazine
+.reserve_magazine_wrap {
+    background-image: url('/assets/images/line_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    height: 380px;
+    background-size: auto 353px;
+    position: relative;
+    @include flex-row;
+ 
+    .magazine_inner {
+        position: relative;
+        @include flex-row-center-x;
+        width: 100%;
+        padding: 0 5vw;
+
+
+        .magazine_tit {
+            position: relative;
+            z-index: 1;
+            margin-top: 75px;
+            left: 28px;
+            @include flex-column-center-x-y;
+            gap: 30px;
+            
+            .magazine_img {
+                width: 100%;
+            }
+
+            .magazine_btn_box {
+                height: 38px;
+                display: flex;
+                
+                .magazine_btn {
+                    @include flex-row-center-x-y;
+                    width: 125px;
+                    height: 100%;
+                    color: #000;
+                    border: 2px solid #000;
+                    font-size: 1.4rem;
+                    transition: $a-hover-transition;
+                    border-radius: $a-border-radius-base;
+
+                    &:hover {
+                        background-color: #000;
+                        color: $a-hover-txt-color-white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .reserve_visual_box{
+            opacity: $global-opacity-hidden;
+            transition: opacity 1.8s;
+
+            .visual_img {
+                width: 100%;
+            }    
+            .res_visual_img {
+                display: none;
+            }
+        }
+    }
+}
+
+// store
+.store_wrap {
+    background-image: url('/assets/images/store_bg.jpg');
+    background-size: 100% auto;
+    height: 400px;
+    overflow: hidden; // 사진 튀어나오는거 없앰
+    width: 100%;
+    position: relative;
+
+    .store_inner {
+        position: relative;
+        padding: 0 5vw;
+            
+            .store_img03_box {
+                background-image: url('/assets/images/store_img03.png');
+                position: absolute;
+                left: 53%;
+                transform: translateX(-50%);
+                top: -60px;
+                height: 142px;
+                width: 340px;
+            }
+
+        .img_txt_box {
+            position: relative;
+            right: 40px;
+            @include flex-row-center-x-y;
+            gap: 150px;
+
+             .img_box {
+                    opacity: $global-opacity-hidden;
+                    transition: all 1.5s ease-out;
+
+                    .store_img {
+                        // width: 96%;
+                        background-size: cover;
+                    }
+                }
+
+            .store_txt_box {
+                position: relative;
+                top: 20px;
+                font-size: 1.5rem;
+                color: #303030;
+                white-space: nowrap;
+
+                .store_txt01 {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                    line-height: 1.3;
+                    transform: translateX(230%);
+                    opacity: $global-opacity-hidden;
+                    transition: all 2.8s;
+
+                    span {
+                        font-weight: 500;
+                    }
+
+                    .store_txt_tit {
+                        font-size: 2.8rem;
+                    }
+                }
+
+                .store_txt02 {
+                    margin-bottom: 10px;
+                    line-height: 1.3;
+                    transform: translateX(230%);
+                    opacity: 0;
+                    transition: all 3.4s;
+
+                    .store_txt02_last {
+                        margin-top: 10px;
+                    }
+                }
+                .store_btn {
+                    @include flex-row;
+                    margin-top: 20px;
+                    border: 2px solid #222;
+                    border-radius: 3px;
+                    height: 40px;
+                    width: 121px;
+                    transform: translateX(60vw);
+                    opacity: $global-opacity-hidden;
+                    transition: all 3.8s;
+
+                    a {
+                        @include flex-row-center-x-y;
+                        color: #222;
+                        height: 100%;
+                        width: 100%;
+                        transition: $a-hover-transition;
+
+                        &:hover {
+                            background-color: #222;
+                            color: $a-hover-txt-color-white;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .res_store_bottom {
+            display: none;
+        } 
+    }
+}
+
+@import './responsive/res_index/res_banner';
+@import './responsive/res_index/res_noti';
+@import './responsive/res_index/res_swiper';
+@import './responsive/res_index/res_rewards';
+@import './responsive/res_index/res_colombia';
+@import './responsive/res_index/res_reserve';
+@import './responsive//res_index/res_fav';
+@import './responsive/res_index/res_magazine';
+@import './responsive/res_index/res_store';
