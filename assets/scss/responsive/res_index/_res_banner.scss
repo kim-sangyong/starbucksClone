@@ -71,7 +71,7 @@
     .res_main_wrap {
         display: block;
         background-repeat: no-repeat;
-        background-image: url('/assets/images/index-responsive/res_main_bg.jpg');
+        background-image: url('../../../images/index-responsive/res_main_bg.jpg');
         background-position: center;
         background-size: cover;
         width: auto;
@@ -152,7 +152,6 @@
     }
 }
 
-// 모바일
 @media screen and (max-width: 570px) {
     .main_img_wrap {
         display: none;
@@ -161,7 +160,7 @@
     .res_main_wrap {
         display: block;
         background-repeat: no-repeat;
-        background-image: url('/assets/images/index-responsive/res_main_bg.jpg');
+        background-image: url('../../../images/index-responsive/res_main_bg.jpg');
         background-position: center;
         background-size: cover;
         width: auto;
