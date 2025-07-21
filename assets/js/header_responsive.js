@@ -1,4 +1,6 @@
-document.querySelector('#tablet_nav_open').addEventListener('click', () => {
+document.querySelector('#tablet_nav_open').addEventListener('click', (e) => {
+    e.preventDefault();
+    
     document.querySelector('#nav_bg_event').style.display = 'block';
         
         document.querySelector('#nav_width_event').classList.add('width_open');
