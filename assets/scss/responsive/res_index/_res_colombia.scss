@@ -68,7 +68,6 @@
             .colombia_con_box { 
                 @include flex-column-center-y;
                 color: #003d10;
-                transform: translateX(0);
                 
                 .pc_txt_con {
                     display: none;
