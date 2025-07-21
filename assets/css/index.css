@@ -1294,8 +1294,6 @@
     width: 100%;
     max-width: 100%;
     display: block;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
   }
   .colombia_wrap .colombia_inner .colombia_con_box {
     display: flex;
@@ -1303,8 +1301,6 @@
     align-items: center;
     color: #003d10;
     transform: translateX(0);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
   }
   .colombia_wrap .colombia_inner .colombia_con_box .pc_txt_con {
     display: none;
