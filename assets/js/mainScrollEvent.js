@@ -15,14 +15,18 @@ window.addEventListener('scroll', function() {
             }
         } 
         // 콜롬비아 라니뇨 스크롤 이벤트
-        if(window.scrollY >= 300 && window.innerWidth >= 884) {
+        if (window.scrollY >= 410) {
             colombiaScroll('#coffee_scroll_event');
-            colombiaScroll('#colombia_scroll_event'); // 함수를 만들어 중복 제거
-        }
-        if(window.scrollY >= 2400 && window.innerWidth <= 883) {
-            colombiaScroll('#res_coffee_scroll_event');
             colombiaScroll('#colombia_scroll_event');
         }
+        // if(window.scrollY >= 300 && window.innerWidth >= 884) {
+        //     colombiaScroll('#coffee_scroll_event');
+        //     colombiaScroll('#colombia_scroll_event'); // 함수를 만들어 중복 제거
+        // }
+        // if(window.scrollY >= 2400 && window.innerWidth <= 883) {
+        //     colombiaScroll('#res_coffee_scroll_event');
+        //     colombiaScroll('#colombia_scroll_event');
+        // }
         
         // 리저브 커피 opacity
         if(window.scrollY >= 720) {
