@@ -62,18 +62,13 @@
                 .res_coffee_bean {
                     width: 100%;
                     max-width: 100%;
-                    display: block;
-                    opacity: 0;
-                    transition: opacity 1s ease-in-out;;
-                    
+                    display: block;        
                 }
             }
             .colombia_con_box { 
                 @include flex-column-center-y;
                 color: #003d10;
                 transform: translateX(0);
-                opacity: 0;
-                transition: opacity 1s ease-in-out;
                 
                 .pc_txt_con {
                     display: none;
